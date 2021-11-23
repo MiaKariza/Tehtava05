@@ -2,3 +2,8 @@
 body {
 	background-color: rose;
 }
+
+.viesti { 
+	display: flex; 
+    justify-content: center 
+}
