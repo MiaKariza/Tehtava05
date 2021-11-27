@@ -1,9 +1,8 @@
-@charset "ISO-8859-1";
+
 body {
-	background-color: rose;
+    background-color: #95285e;
 }
 
-.viesti { 
-	display: flex; 
-    justify-content: center 
+.oikealle {
+	text-align: right !important;		
 }

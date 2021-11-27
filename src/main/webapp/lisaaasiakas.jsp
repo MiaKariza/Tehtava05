@@ -14,7 +14,7 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet">
-<title>Insert title here</title>
+<title>Uusi asiakas</title>
 </head>
 <body>
 	<p></p>
@@ -58,6 +58,10 @@
 
 <script>
 	$(document).ready(function() {
+		$("#takaisin").click(function() {
+			document.location = "listaaasiakkaat.jsp";
+		});
+		
 		$("#tiedot").validate({
 			rules : {
 				etunimi : {
@@ -114,12 +118,15 @@
 				if (result.response == 0) {
 					$("#viesti").html("Asiakkaan lisääminen epäonnistui");
 				} else if (result.response == 1) {
-					$("#etunimi", "#sukunimi", "#puhelin", "#sposti").val('');
 					$("#viesti").html("Asiakkaan lisääminen onnistui");
-					
+					//$("#etunimi", "#sukunimi", "#puhelin", "#sposti").val(""); EI TOIMI JOSTAIN SYYSTÄ	
+					setInterval('refreshPage()', 1000)
 				}
-			}
-		});
+			}});
+	}
+	
+	function refreshPage() {
+	    location.reload(true);
 	}
 </script>
 </html>
